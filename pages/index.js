@@ -1,6 +1,7 @@
 import { FooterBanner, Product, HeroBanner } from "../components";
 import { client } from "../lib/client";
 function Home({ products, bannerData }) {
+  console.log(bannerData);
   return (
     <>
       <HeroBanner heroBanner={bannerData[0]} />
@@ -9,9 +10,11 @@ function Home({ products, bannerData }) {
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {products?.map((product) => product.name)}
+        {products?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
       </div>
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   );
 }

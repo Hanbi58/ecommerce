@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "../lib/client";
 function HeroBanner({ heroBanner }) {
-  console.log(heroBanner);
   return (
     <div className="hero-banner-container">
       <p className="beats-solo">{heroBanner.smallText}</p>
