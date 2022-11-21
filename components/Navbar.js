@@ -6,7 +6,7 @@ const Navbar = () => {
       <p className="logo">
         <Link href="/">JSM Headphones</Link>
       </p>
-      <button className="cart-icon" onClick={""}>
+      <button className="cart-icon">
         <AiOutlineShopping />
         <span className="cart-item-qty">0</span>
       </button>
